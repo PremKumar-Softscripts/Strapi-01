@@ -1,17 +1,17 @@
-export default ({ env }) => ({
+export default () => ({
   auth: {
-    secret: env('ADMIN_JWT_SECRET'),
+    secret: '2DH+lArk2y+O6cuXT5IWNg==', // Replace with a secure random key
   },
   apiToken: {
-    salt: env('API_TOKEN_SALT'),
+    salt: '63Tc4qy3TBRhKmUCyvmJIw==', // Replace with a secure random salt
   },
   transfer: {
     token: {
-      salt: env('TRANSFER_TOKEN_SALT'),
+      salt: 'LTYaAgiXPTS8wNyIPCSh4w==', // Replace with a secure random key
     },
   },
   flags: {
-    nps: env.bool('FLAG_NPS', true),
-    promoteEE: env.bool('FLAG_PROMOTE_EE', true),
+    nps: true,
+    promoteEE: true,
   },
 });
